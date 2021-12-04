@@ -9,8 +9,8 @@ edition = "2021"
 
 [lib]
 name = "advent_of_code"
-path = "src/2021/day_3/part_1/data.rs"
+path = "src/2021/day_3/data.rs"
 
 [[bin]]
 name = "main"
-path = "src/2021/day_3/part_1/main.rs"
+path = "src/2021/day_3/part_2/main.rs"
