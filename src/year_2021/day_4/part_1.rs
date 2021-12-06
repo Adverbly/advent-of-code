@@ -53,9 +53,6 @@ pub fn main() {
     let split = data::INPUT.split("\n");
     let mut lines: Vec<&str> = split.collect();
     let numbers: Vec<i32> = lines.remove(0).split(",").map(|num_str| num_str.parse::<i32>().unwrap()).collect();
-    println!("{:?}", &numbers);
-    // lines.pop();
-    // let boards: Vec<&str> = lines.chunks(6).collect();
     let board_lines = lines.chunks(6);
     let collected: Vec<&[&str]> = board_lines.collect();
     let mut boards: Vec<Board> = collected
@@ -84,7 +81,6 @@ pub fn main() {
         .collect();
     let mut winners: Vec<Winner> = Vec::new();
     for number in numbers {
-        println!("{:?}", &number);
         for board in &mut boards {
             let winning_line = board.draw(number);
             match winning_line {
@@ -105,10 +101,7 @@ pub fn main() {
             break
         }
     }
-    println!("{:?}", &collected);
-    println!("{:?}", &boards);
-    println!("{:?}", &winners);
-    println!("{:?}", &winners);
+    println!("{:?}", &winners.get(0).unwrap().score);
 }
 
 enum RoundDirection {
