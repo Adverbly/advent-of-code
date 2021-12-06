@@ -7,10 +7,14 @@ edition = "2021"
 
 [dependencies]
 
-[lib]
-name = "advent_of_code"
-path = "src/2021/day_3/data.rs"
+#[lib]
+#name = "year_2021"
+#path = "src/year_2021/mod.rs"
+
+#[day_4]
+#name = "day_four"
+#path = "src/2021/day_4/data.rs"
 
 [[bin]]
 name = "main"
-path = "src/2021/day_3/part_2/main.rs"
+path = "src/year_2021/day_4/part_1.rs"

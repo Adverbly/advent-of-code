@@ -1,5 +1,7 @@
-fn main() {
-    let split = advent_of_code::INPUT.split("\n");
+use crate::year_2021::day_3::data;
+
+pub fn main() {
+    let split = data::INPUT.split("\n");
     let vec: Vec<&str> = split.collect();
 
     let mut digit_ones_counts = vec![0; vec[0].chars().count()];
